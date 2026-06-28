@@ -1,0 +1,43 @@
+# Telegram
+telethon
+
+# Environment Variables
+python-dotenv
+
+# Database
+sqlalchemy
+psycopg2-binary
+
+# Data Processing
+pandas
+numpy
+
+# API
+fastapi
+uvicorn
+
+# Data Validation
+pydantic
+
+# dbt
+dbt-core
+dbt-postgres
+
+# Computer Vision
+ultralytics
+opencv-python
+
+# Pipeline Orchestration
+dagster
+dagster-webserver
+
+# Utilities
+requests
+tqdm
+
+# Testing
+pytest
+
+# Jupyter
+jupyter
+ipykernel

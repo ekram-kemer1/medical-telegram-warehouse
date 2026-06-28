@@ -1,22 +1,15 @@
-# Virtual Environment
-venv/
-.venv/
-
-# Environment variables
 .env
-
-# Python
 __pycache__/
 *.pyc
-
-# VS Code
-.vscode/
-
-# Logs
+*.pyo
+data/raw/
 logs/
-
-# Database
-*.db
-
-# macOS
-.DS_Store
+.venv/
+*.egg-info/
+dist/
+build/
+.dbt/
+target/
+dbt_packages/
+*.session
+*.session-journal
