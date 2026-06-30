@@ -88,3 +88,17 @@ def medical_warehouse_pipeline():
     yolo_loaded = load_yolo_to_postgres(start=yolo_done)
     transformed = run_dbt_transformations(start=yolo_loaded)
     run_dbt_tests(start=transformed)
+    from dagster import ScheduleDefinition
+
+medical_warehouse_schedule = ScheduleDefinition(
+    job=medical_warehouse_pipeline,
+    cron_schedule="0 6 * * *",   # daily at 06:00
+    execution_timezone="Africa/Addis_Ababa",
+    name="daily_medical_warehouse_refresh",
+)
+from dagster import Definitions
+
+defs = Definitions(
+    jobs=[medical_warehouse_pipeline],
+    schedules=[medical_warehouse_schedule],
+)
