@@ -6,3 +6,5 @@ sources:
     tables:
       - name: telegram_messages
         description: "Raw messages scraped from Telegram channels"
+      - name: yolo_detections
+        description: "YOLOv8 object detection results from message images"
